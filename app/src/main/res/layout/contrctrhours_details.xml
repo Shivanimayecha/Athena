@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_5"
+        android:orientation="horizontal"
+        android:padding="@dimen/size_5">
+
+        <TextView
+            android:id="@+id/txt_contractorname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jack's Crew :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/txt_contractorhr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_10"
+            android:text="39 Hrs."
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_16" />
+    </LinearLayout>
+
+</LinearLayout>

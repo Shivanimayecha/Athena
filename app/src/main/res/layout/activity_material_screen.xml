@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaceOrder.ConcreteScreen">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/darkrectangle"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/mapicon"
+                            android:layout_width="@dimen/size_45"
+                            android:layout_height="@dimen/size_40"
+                            android:layout_alignParentLeft="true"
+                            android:layout_margin="@dimen/size_10"
+                            android:padding="@dimen/size_5"
+                            android:src="@drawable/map" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/size_5"
+                            android:layout_toRightOf="@+id/mapicon"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginBottom="@dimen/size_5"
+                                android:text="Select Site"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="@dimen/font_14" />
+
+
+                            <Spinner
+                                android:id="@+id/spn_site"
+                                style="@style/SpinnerTheme"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/size_10"
+                                android:dropDownVerticalOffset="30dp"
+                                android:spinnerMode="dropdown" />
+                        </LinearLayout>
+
+                        <!--
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:id="@+id/dropdown_site"
+                                                android:layout_width="@dimen/size_35"
+                                                android:layout_height="@dimen/size_35"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="@dimen/size_10"
+                                                android:padding="@dimen/size_10"
+                                                android:src="@drawable/arrow" />
+                        -->
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:padding="@dimen/size_5"
+                        card_view:cardBackgroundColor="@color/trans"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/size_45"
+                                android:layout_height="@dimen/size_40"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/size_7"
+                                android:padding="@dimen/size_5"
+                                android:src="@drawable/concrete2" />
+
+                            <TextView
+                                android:id="@+id/txt_concrete_dringe"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Concrete Drainage"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textSize="@dimen/font_16" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:padding="@dimen/size_5"
+                        card_view:cardBackgroundColor="@color/trans"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="4dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/size_45"
+                                    android:layout_height="@dimen/size_40"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_margin="@dimen/size_7"
+                                    android:padding="@dimen/size_5"
+                                    android:src="@drawable/concrete2" />
+
+                                <Spinner
+                                    android:id="@+id/spn_attribute1"
+                                    style="@style/SpinnerTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/size_10"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:dropDownVerticalOffset="30dp"
+                                    android:spinnerMode="dropdown" />
+                            </LinearLayout>
+
+                            <!--
+                                                    <androidx.appcompat.widget.AppCompatImageView
+                                                        android:id="@+id/dropdown_mix"
+                                                        android:layout_width="@dimen/size_35"
+                                                        android:layout_height="@dimen/size_35"
+                                                        android:layout_alignParentRight="true"
+                                                        android:layout_gravity="center"
+                                                        android:layout_margin="@dimen/size_10"
+                                                        android:padding="@dimen/size_10"
+                                                        android:src="@drawable/arrow" />
+                            -->
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/mixCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:padding="@dimen/size_5"
+                        card_view:cardBackgroundColor="@color/trans"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="4dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/size_45"
+                                    android:layout_height="@dimen/size_40"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_margin="@dimen/size_7"
+                                    android:padding="@dimen/size_5"
+                                    android:src="@drawable/aggregates2" />
+
+                                <Spinner
+                                    android:id="@+id/spn_attribute2"
+                                    style="@style/SpinnerTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/size_10"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:dropDownVerticalOffset="30dp"
+                                    android:spinnerMode="dropdown" />
+                            </LinearLayout>
+
+                            <!--
+                                                    <androidx.appcompat.widget.AppCompatImageView
+                                                        android:id="@+id/dropdown_aggregate"
+                                                        android:layout_width="@dimen/size_35"
+                                                        android:layout_height="@dimen/size_35"
+                                                        android:layout_alignParentRight="true"
+                                                        android:layout_gravity="center"
+                                                        android:layout_margin="@dimen/size_10"
+                                                        android:padding="@dimen/size_10"
+                                                        android:src="@drawable/arrow" />
+                            -->
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/aggrigateCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:padding="@dimen/size_5"
+                        card_view:cardBackgroundColor="@color/trans"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="4dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/size_45"
+                                    android:layout_height="@dimen/size_40"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_margin="@dimen/size_7"
+                                    android:padding="@dimen/size_5"
+                                    android:src="@drawable/slump" />
+
+                                <Spinner
+                                    android:id="@+id/spn_attribute3"
+                                    style="@style/SpinnerTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/size_10"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:dropDownVerticalOffset="30dp"
+                                    android:spinnerMode="dropdown" />
+                            </LinearLayout>
+
+                            <!--
+                                                    <androidx.appcompat.widget.AppCompatImageView
+                                                        android:id="@+id/dropdown_slump"
+                                                        android:layout_width="@dimen/size_35"
+                                                        android:layout_height="@dimen/size_35"
+                                                        android:layout_alignParentRight="true"
+                                                        android:layout_gravity="center"
+                                                        android:layout_margin="@dimen/size_10"
+                                                        android:padding="@dimen/size_10"
+                                                        android:src="@drawable/arrow" />
+                            -->
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/slumcard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:padding="@dimen/size_5"
+                        card_view:cardBackgroundColor="@color/trans"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="4dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/size_45"
+                                    android:layout_height="@dimen/size_40"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_margin="@dimen/size_7"
+                                    android:padding="@dimen/size_5"
+                                    android:src="@drawable/slump" />
+
+                                <Spinner
+                                    android:id="@+id/spn_attribute4"
+                                    style="@style/SpinnerTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/size_10"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:dropDownVerticalOffset="30dp"
+                                    android:spinnerMode="dropdown" />
+                            </LinearLayout>
+
+                            <!--
+                                                    <androidx.appcompat.widget.AppCompatImageView
+                                                        android:layout_width="@dimen/size_35"
+                                                        android:layout_height="@dimen/size_35"
+                                                        android:layout_alignParentRight="true"
+                                                        android:layout_gravity="center"
+                                                        android:layout_margin="@dimen/size_10"
+                                                        android:padding="@dimen/size_10"
+                                                        android:src="@drawable/arrow" />
+                            -->
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/font_15"
+                        android:layout_marginTop="@dimen/font_15"
+                        android:layout_marginRight="@dimen/font_15"
+                        android:layout_marginBottom="@dimen/font_15"
+                        card_view:cardBackgroundColor="@color/trans"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="3.5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enter Qty" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/size_70"
+                                android:layout_marginLeft="@dimen/size_10"
+                                android:layout_marginRight="@dimen/size_10"
+                                android:layout_marginBottom="@dimen/size_20"
+                                android:background="@drawable/squarcorn"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/edtQty"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/size_10"
+                                    android:background="@null"
+                                    android:hint="Enter Qty"
+                                    android:padding="@dimen/size_5"
+                                    android:textSize="@dimen/font_15" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/font_15"
+                        android:layout_marginTop="@dimen/font_15"
+                        android:layout_marginRight="@dimen/font_15"
+                        android:layout_marginBottom="@dimen/font_15"
+                        card_view:cardBackgroundColor="@color/trans"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="3.5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/size_30"
+                                        android:layout_height="@dimen/size_30"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_margin="@dimen/common_2_dp"
+                                        android:padding="@dimen/size_5"
+                                        android:src="@drawable/quantity" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="@dimen/font_12"
+                                        android:text="Note / Desired time"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_16"
+                                        android:textStyle="normal" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/size_100"
+                                android:layout_marginLeft="@dimen/size_10"
+                                android:layout_marginRight="@dimen/size_10"
+                                android:layout_marginBottom="@dimen/size_20"
+                                android:background="@drawable/squarcorn"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/edtNotes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/size_10"
+                                    android:background="@null"
+                                    android:hint="Add here....."
+                                    android:padding="@dimen/size_5"
+                                    android:textSize="@dimen/font_15" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:id="@+id/btnDatePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/darkrectangle"
+                        android:padding="@dimen/size_10">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/lefticon"
+                            android:layout_width="@dimen/size_45"
+                            android:layout_height="@dimen/size_45"
+                            android:layout_alignParentLeft="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/size_20"
+                            android:layout_marginRight="@dimen/size_15"
+                            android:src="@drawable/left_black_24dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/size_20"
+                                android:layout_marginBottom="@dimen/size_7"
+                                android:text="Required Delivery Date"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_16" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/calicon"
+                                    android:layout_width="@dimen/size_40"
+                                    android:layout_height="@dimen/size_40"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/size_10"
+                                    android:layout_marginStart="60dp"
+                                    android:layout_marginLeft="@dimen/size_5"
+                                    android:layout_toRightOf="@+id/lefticon"
+                                    android:padding="@dimen/size_5"
+                                    android:src="@drawable/calendarpink" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/calicon"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/calender"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="30/2/2020"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/size_20"
+                                        android:textStyle="normal" />
+
+                                    <!--
+                                                                        <TextView
+                                                                            android:id="@+id/day"
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:layout_gravity="center"
+                                                                            android:gravity="left"
+                                                                            android:text="thursday"
+                                                                            android:textColor="@android:color/darker_gray"
+                                                                            android:textSize="@dimen/size_15"
+                                                                            android:textStyle="normal" />
+                                    -->
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_45"
+                            android:layout_height="@dimen/size_45"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/size_20"
+                            android:src="@drawable/right" />
+
+                    </RelativeLayout>
+
+                    <!--
+                                        <androidx.appcompat.widget.AppCompatButton
+                                            android:id="@+id/addcart"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="75dp"
+                                            android:layout_margin="@dimen/size_15"
+                                            android:background="@color/colorPrimary"
+                                            android:padding="@dimen/size_5"
+                                            android:text="Add to Cart"
+                                            android:textColor="@android:color/white" />
+                    -->
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_addcart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/size_5"
+                        android:text="Add to Cart"
+                        android:textColor="@android:color/white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_placeorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:background="@drawable/squrcorner"
+                        android:padding="@dimen/size_5"
+                        android:text="Place Order"
+                        android:textColor="@color/colorPrimary" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/custom_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

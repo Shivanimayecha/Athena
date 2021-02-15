@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_10"
+        android:elevation="5dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_marginBottom="@dimen/size_7"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/size_30"
+                android:layout_height="@dimen/size_30"
+                android:layout_gravity="top"
+                android:layout_marginLeft="@dimen/size_10"
+                android:src="@drawable/question" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_10"
+                android:gravity="top"
+                android:text="Q"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_15" />
+
+            <TextView
+                android:id="@+id/txt_queId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_15" />
+
+            <TextView
+                android:id="@+id/txt_queTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="@dimen/size_10"
+                android:text="@string/questiontitle"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_15" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <!--
+        </RelativeLayout>
+    -->
+
+    <!-- <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         >-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_20"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="@dimen/size_20"
+        app:cardBackgroundColor="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/roundcornerlightborder1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_hsstatus"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:layout_marginTop="@dimen/size_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_hs_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/selectinspectnstatus"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_18" />
+
+                    <ImageView
+                        android:layout_width="@dimen/size_30"
+                        android:layout_height="@dimen/size_25"
+                        android:layout_marginLeft="@dimen/size_10"
+                        android:background="@drawable/arrow" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <EditText
+                android:id="@+id/edt_cmtHSEQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_marginBottom="@dimen/size_10"
+                android:background="@null"
+                android:hint="Type here.."
+                android:maxLines="5"
+                android:paddingLeft="@dimen/size_10"
+                android:paddingRight="@dimen/size_10"
+                android:scrollbars="vertical" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <!--
+        </RelativeLayout>
+    -->
+</LinearLayout>

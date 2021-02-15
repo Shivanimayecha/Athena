@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.athena.group">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name="com.athena.group.application.Utility"
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/appicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.athena.group.HSQuestionActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.orderHistory.SingleOpenOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Truck__Driver_Panel.SingleAssignOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Activity.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Activity.ForgotPassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Activity.SignOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Activity.JobFrmLstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.MobilePlant.MblFrmLstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Activity.JobReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.MobilePlant.MblFinalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.MobilePlant.MblChckNxtActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.MobilePlant.MblPlntChekActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.HSQuesInsctn.PastHSInspcActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.HSQuesInsctn.PastHSQuesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.HSQuesInsctn.HSInspctnActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.HSQuesInsctn.HSQuestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Truck__Driver_Panel.CompletedOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Truck__Driver_Panel.VehicleDefectReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Truck__Driver_Panel.TodayTripActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.PlaceOrder.MaterialScreenNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.PlaceOrder.CartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Truck__Driver_Panel.TodaysOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Truck__Driver_Panel.OrderDisplayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Truck__Driver_Panel.AssignOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Truck__Driver_Panel.TruckDriverActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.athena.group.timeclockdemo" />
+        <activity
+            android:name="com.athena.group.orderHistory.OpenOrderHistoryList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.LogHistory.DateLogHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.PlaceOrder.MaterialScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.PlaceOrder.AggregateScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Activity.SelectAttributeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Activity.EditUserProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.report.Payout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.report.SubContractorReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.report.SiteReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.orderHistory.OrderHistoryList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.orderHistory.SubOrderHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.LogHistory.SubContractorLogHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.LogHistory.SiteLogHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.PlaceOrder.ConcreteScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.report.Report"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.orderHistory.OrderHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.LogHistory.LogHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.PlaceOrder.PlaceOrder"
+            android:screenOrientation="portrait" />
+        <!--
+<activity
+            android:name=".Activity.TimeLog"
+            android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name="com.athena.group.Activity.TimeLogNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Activity.Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Activity.Timecard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Activity.Signup"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".Activity.LoginScreen" /> -->
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name="com.athena.group.Activity.LoginSignup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.athena.group.Activity.Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.athena.group.application.firebase.FcmMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.athena.group.application.firebase.FcmInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.athena.group.application.firebase.FcmRegistrationIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

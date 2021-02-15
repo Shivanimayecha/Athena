@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaceOrder.ConcreteScreen">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:padding="@dimen/size_5"
+                        card_view:cardBackgroundColor="@color/trans"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="4dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/size_45"
+                                    android:layout_height="@dimen/size_40"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_margin="@dimen/size_10"
+                                    android:padding="@dimen/size_5"
+                                    android:src="@drawable/aggregates2" />
+
+                                <Spinner
+                                    android:id="@+id/spn_qty"
+                                    style="@style/SpinnerTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/size_10"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:dropDownVerticalOffset="30dp"
+                                    android:spinnerMode="dropdown" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/mixCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:padding="@dimen/size_5"
+                        card_view:cardBackgroundColor="@color/trans"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="4dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/size_45"
+                                    android:layout_height="@dimen/size_40"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_margin="@dimen/size_10"
+                                    android:padding="@dimen/size_5"
+                                    android:src="@drawable/aggregates2" />
+
+                                <Spinner
+                                    android:id="@+id/spn_attribute2"
+                                    style="@style/SpinnerTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/size_10"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:dropDownVerticalOffset="30dp"
+                                    android:spinnerMode="dropdown" />
+                            </LinearLayout>
+
+                            <!--
+                                                    <androidx.appcompat.widget.AppCompatImageView
+                                                        android:id="@+id/dropdown_aggregate"
+                                                        android:layout_width="@dimen/size_35"
+                                                        android:layout_height="@dimen/size_35"
+                                                        android:layout_alignParentRight="true"
+                                                        android:layout_gravity="center"
+                                                        android:layout_margin="@dimen/size_10"
+                                                        android:padding="@dimen/size_10"
+                                                        android:src="@drawable/arrow" />
+                            -->
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/aggrigateCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:padding="@dimen/size_5"
+                        card_view:cardBackgroundColor="@color/trans"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="4dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/size_45"
+                                    android:layout_height="@dimen/size_40"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_margin="@dimen/size_10"
+                                    android:padding="@dimen/size_5"
+                                    android:src="@drawable/slump" />
+
+                                <Spinner
+                                    android:id="@+id/spn_attribute3"
+                                    style="@style/SpinnerTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/size_10"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:dropDownVerticalOffset="30dp"
+                                    android:spinnerMode="dropdown" />
+                            </LinearLayout>
+
+                            <!--
+                                                    <androidx.appcompat.widget.AppCompatImageView
+                                                        android:id="@+id/dropdown_slump"
+                                                        android:layout_width="@dimen/size_35"
+                                                        android:layout_height="@dimen/size_35"
+                                                        android:layout_alignParentRight="true"
+                                                        android:layout_gravity="center"
+                                                        android:layout_margin="@dimen/size_10"
+                                                        android:padding="@dimen/size_10"
+                                                        android:src="@drawable/arrow" />
+                            -->
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/slumcard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:padding="@dimen/size_5"
+                        app:cardBackgroundColor="@color/trans"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="4dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/size_45"
+                                    android:layout_height="@dimen/size_40"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_margin="@dimen/size_10"
+                                    android:padding="@dimen/size_5"
+                                    android:src="@drawable/slump" />
+
+                                <Spinner
+                                    android:id="@+id/spn_attribute4"
+                                    style="@style/SpinnerTheme"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/size_10"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:dropDownVerticalOffset="30dp"
+                                    android:spinnerMode="dropdown" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <include
+                                        layout="@layout/custom_progress"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_10"
+                        android:padding="@dimen/size_5"
+                        card_view:cardBackgroundColor="@color/trans"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="4dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/size_10"
+                                    android:layout_marginTop="@dimen/size_10"
+                                    android:text="@string/pumprequired"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_15" />
+
+                                <RadioGroup
+                                    android:id="@+id/rg1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/size_10"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/rb_yes"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/colorPrimary"
+                                        android:text="@string/yes"
+                                        android:textColor="@color/colorPrimary" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_no"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/size_10"
+                                        android:buttonTint="@color/colorPrimary"
+                                        android:text="@string/no"
+                                        android:textColor="@color/colorPrimary" />
+
+
+                                </RadioGroup>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/size_10"
+                        card_view:cardBackgroundColor="@color/trans"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="3.5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/size_30"
+                                        android:layout_height="@dimen/size_30"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_margin="@dimen/common_2_dp"
+                                        android:padding="@dimen/size_5"
+                                        android:src="@drawable/quantity" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="@dimen/font_12"
+                                        android:text="@string/notedesired_time"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_16"
+                                        android:textStyle="normal" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/size_90"
+                                android:layout_marginLeft="@dimen/size_10"
+                                android:layout_marginRight="@dimen/size_10"
+                                android:layout_marginBottom="@dimen/size_20"
+                                android:background="@drawable/squarcorn"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/edtNotes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/size_10"
+                                    android:background="@null"
+                                    android:hint="@string/notedesired_time"
+                                    android:padding="@dimen/size_5"
+                                    android:textSize="@dimen/font_15" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:id="@+id/btnDatePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_100"
+                        android:layout_gravity="center"
+                        android:background="@drawable/darkrectangle"
+                        android:padding="@dimen/size_10">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/lefticon"
+                            android:layout_width="@dimen/size_45"
+                            android:layout_height="@dimen/size_45"
+                            android:layout_alignParentLeft="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/size_20"
+                            android:layout_marginRight="@dimen/size_15"
+                            android:src="@drawable/left_black_24dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/size_20"
+                                android:layout_marginBottom="@dimen/size_10"
+                                android:text="@string/requiredelivery_date"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_16" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_dateday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/calicon"
+                                    android:layout_width="@dimen/size_40"
+                                    android:layout_height="@dimen/size_40"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/size_10"
+                                    android:layout_marginStart="60dp"
+                                    android:layout_marginLeft="@dimen/size_5"
+                                    android:layout_toRightOf="@+id/lefticon"
+                                    android:padding="@dimen/size_5"
+                                    android:src="@drawable/calendarpink" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/calicon"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txt_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="@string/date"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/size_20"
+                                        android:textStyle="normal" />
+
+                                    <TextView
+                                        android:id="@+id/txt_day"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="left"
+                                        android:text="thursday"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/size_15"
+                                        android:textStyle="normal" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_45"
+                            android:layout_height="@dimen/size_45"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/size_20"
+                            android:src="@drawable/right" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_addcart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/size_5"
+                        android:text="@string/addtocart"
+                        android:textColor="@android:color/white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_placeorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_60"
+                        android:layout_margin="@dimen/size_10"
+                        android:background="@drawable/squrcorner"
+                        android:padding="@dimen/size_5"
+                        android:text="@string/placeorder"
+                        android:textColor="@color/colorPrimary" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+

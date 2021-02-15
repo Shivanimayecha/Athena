@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".report.Report">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_35"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_5dp">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_contractor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/contractor" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/contractorwisetimelog"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/byperson"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+                    </LinearLayout>
+
+                    <!--<View
+                        android:layout_width="2dp"
+                        android:layout_height="@dimen/size_130"
+                        android:background="#c0c0c0" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_site"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/sites" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_sites"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="Sites wise Time-log"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="by Projects"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+
+
+                    </LinearLayout>-->
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/spacing_10dp"
+                android:layout_marginRight="@dimen/spacing_10dp"
+                android:background="#c0c0c0" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_site"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/sites" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_sites"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/siteswisetimelog"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/byprojects"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginLeft="@dimen/spacing_10dp"
+                            android:layout_marginRight="@dimen/spacing_10dp"
+                            android:background="#c0c0c0" />
+            -->
+
+            <!--
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_130"
+                            android:layout_marginLeft="@dimen/font_10"
+                            android:layout_marginRight="@dimen/font_10"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_payout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/size_40"
+                                        android:layout_height="@dimen/size_35"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/calendar" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/txt_time"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/font_10"
+                                        android:gravity="center"
+                                        android:text="@string/payout"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_15" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/reports"
+                                        android:textColor="@android:color/darker_gray"
+                                        android:textSize="@dimen/font_10" />
+                                </LinearLayout>
+
+                                &lt;!&ndash;
+                                                    <View
+                                                        android:layout_width="2dp"
+                                                        android:layout_height="@dimen/size_130"
+                                                        android:background="#c0c0c0" />
+                                &ndash;&gt;
+
+                                &lt;!&ndash;
+                                                    <LinearLayout
+                                                        android:id="@+id/ll_sitemanual"
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_weight="1"
+                                                        android:gravity="center"
+                                                        android:orientation="vertical">
+
+
+                                                        <androidx.appcompat.widget.AppCompatImageView
+                                                            android:layout_width="@dimen/size_40"
+                                                            android:layout_height="@dimen/size_35"
+                                                            android:layout_gravity="center"
+                                                            android:src="@drawable/supervisor" />
+
+                                                        <androidx.appcompat.widget.AppCompatTextView
+                                                            android:id="@+id/txt_supervisor"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginTop="@dimen/font_10"
+                                                            android:gravity="center"
+                                                            android:text="Site wise Mutual"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="@dimen/font_15" />
+
+                                                        <androidx.appcompat.widget.AppCompatTextView
+
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="center"
+                                                            android:text="Report"
+                                                            android:textColor="@android:color/darker_gray"
+                                                            android:textSize="@dimen/font_10" />
+
+
+                                                    </LinearLayout>
+                                &ndash;&gt;
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+            -->
+
+            <!--
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginLeft="@dimen/spacing_10dp"
+                            android:layout_marginRight="@dimen/spacing_10dp"
+                            android:background="#c0c0c0" />
+            -->
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

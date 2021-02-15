@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_20" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/img_notification"
+                android:layout_width="@dimen/size_25"
+                android:layout_height="@dimen/size_25"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/size_10"
+                android:background="@drawable/notification" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_sprvsrname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/size_7"
+        android:layout_marginEnd="@dimen/size_20"
+        android:layout_marginBottom="@dimen/size_5"
+        android:text="@string/name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font_16" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_35"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/profile" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/profile"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/myaccount"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="@dimen/size_130"
+                        android:background="#c0c0c0" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_timelog"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_35"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/timelog" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/timelog"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/logcontractortime"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/spacing_10dp"
+                android:layout_marginRight="@dimen/spacing_10dp"
+                android:background="#c0c0c0" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_placeordr"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_35"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/placeorder" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/placeorder"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/cart"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="@dimen/size_130"
+                        android:background="#c0c0c0" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_loghistory"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_35"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/loghistory" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/loghistory"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/historyofpastwork"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/spacing_10dp"
+                android:layout_marginRight="@dimen/spacing_10dp"
+                android:background="#c0c0c0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_ordrhistory"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_35"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/orderhistory" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/orderhistroy"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/pastpurchase"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="@dimen/size_130"
+                        android:background="#c0c0c0" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_report"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_35"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/report" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/reports"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/narration"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/spacing_10dp"
+                android:layout_marginRight="@dimen/spacing_10dp"
+                android:background="#c0c0c0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_queans"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/report2" />
+                        <!--android:background="@drawable/report1"
+                        android:backgroundTint="@color/black"-->
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/hsreportform"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/reports"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="@dimen/size_130"
+                        android:background="#c0c0c0" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_past_queans"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/report_form_list" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/hsreportformlist"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/pastreport"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+
+                    </LinearLayout>
+
+                    <!--
+                                        <LinearLayout
+                                            android:id="@+id/ll_hsinspectn"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:layout_width="@dimen/size_40"
+                                                android:layout_height="@dimen/size_35"
+                                                android:layout_gravity="center"
+                                                android:src="@drawable/testdark" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="@dimen/font_10"
+                                                android:gravity="center"
+                                                android:text="H&amp;S Inspection Form"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/font_15" />
+
+                                        </LinearLayout>
+                    -->
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginLeft="@dimen/spacing_10dp"
+                            android:layout_marginRight="@dimen/spacing_10dp"
+                            android:background="#c0c0c0" />
+            -->
+
+            <!--
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/font_10"
+                            android:layout_marginRight="@dimen/font_10"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="@dimen/size_130"
+                                    android:background="#c0c0c0" />
+
+                                &lt;!&ndash;
+                                                    <LinearLayout
+                                                        android:id="@+id/ll_past_hsinspectn"
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_weight="1"
+                                                        android:gravity="center"
+                                                        android:orientation="vertical">
+
+
+                                                        <androidx.appcompat.widget.AppCompatImageView
+                                                            android:layout_width="@dimen/size_40"
+                                                            android:layout_height="@dimen/size_35"
+                                                            android:layout_gravity="center"
+                                                            android:src="@drawable/formdark" />
+
+                                                        <androidx.appcompat.widget.AppCompatTextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginTop="@dimen/font_10"
+                                                            android:gravity="center"
+                                                            android:text="H&amp;S Inspection Form List"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="@dimen/font_15" />
+
+                                                    </LinearLayout>
+                                &ndash;&gt;
+                            </LinearLayout>
+
+                        </LinearLayout>
+            -->
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/spacing_10dp"
+                android:layout_marginRight="@dimen/spacing_10dp"
+                android:background="#c0c0c0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_mobileplant"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/plant_check_list" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/mobileplantchecklist"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/checkuncheck"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="@dimen/size_130"
+                        android:background="#c0c0c0" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_mblfrmlist"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/plant_form_list" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/mobileplantformchecklist"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/pastreport"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/spacing_10dp"
+                android:layout_marginRight="@dimen/spacing_10dp"
+                android:background="#c0c0c0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_jobrvw"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/job_review" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/jobreview"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/review"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="@dimen/size_130"
+                        android:background="#c0c0c0" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_jobfrmlist"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/job_review_form_list" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/jobreviewformlist"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/pastreport"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_logout"
+                android:layout_width="@dimen/size_200"
+                android:layout_height="@dimen/size_55"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/font_25"
+                android:layout_marginBottom="@dimen/size_20"
+                android:background="@drawable/roundcornerspink"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/size_35"
+                    android:layout_height="@dimen/size_35"
+                    android:layout_margin="@dimen/font_15"
+                    android:background="@drawable/logout"
+                    android:backgroundTint="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/size_10"
+                    android:gravity="center"
+                    android:text="@string/logout"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_18" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

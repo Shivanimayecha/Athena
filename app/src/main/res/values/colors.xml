@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#BC0072</color>
+    <color name="colorPrimaryDark">#BC0072</color>
+    <!--    <color name="colorAccent">#6A0643</color>-->
+    <color name="colorAccent">#BC0072</color>
+    <color name="darkviolin">#9920151A</color>
+    <color name="gray">#7D7F81</color>
+    <color name="gray1">#ececec</color>
+    <color name="black">#000000</color>
+    <color name="trans">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yelw">#FFD352</color>
+    <color name="green">#128517</color>
+
+    <color name="multiple_image_select_albumTextBackground">@color/colorPrimary</color>
+    <color name="multiple_image_select_imageSelectBackground">#000000</color>
+    <color name="multiple_image_select_primary">#FFFFFF</color>
+</resources>

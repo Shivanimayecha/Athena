@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaceOrder.PlaceOrder">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/size_30"
+                android:background="@drawable/darkrectangle"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/mapicon"
+                    android:layout_width="@dimen/size_45"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="@dimen/size_10"
+                    android:padding="@dimen/size_5"
+                    android:src="@drawable/map" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size_5"
+                    android:layout_marginRight="@dimen/size_10"
+                    android:layout_toRightOf="@+id/mapicon"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/spn_site"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dropDownVerticalOffset="30dp"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+                <!--
+                                <LinearLayout
+                                    android:layout_toRightOf="@+id/mapicon"
+                                    android:layout_width="@dimen/siz_300"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_margin="@dimen/size_5"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@android:color/darker_gray"
+                                        android:layout_gravity="left"
+                                        android:layout_marginBottom="@dimen/size_5"
+                                        android:text="Select Site"
+                                        android:textSize="@dimen/font_14"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@android:color/black"
+                                        android:layout_gravity="left"
+                                        android:text="1600, Pleasant Valley"
+                                        android:textSize="@dimen/font_16"/>
+
+                                </LinearLayout>
+                -->
+                <!--
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/dropdown_site"
+                                    android:layout_width="@dimen/size_35"
+                                    android:layout_height="@dimen/size_35"
+                                    android:layout_gravity="center"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="@dimen/size_10"
+                                    android:layout_margin="@dimen/size_10"
+                                    android:src="@drawable/arrow" />
+                -->
+            </RelativeLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_concrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/concrete" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/concrete"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/quantitym2"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+                    </LinearLayout>
+
+                    <!-- <View
+                         android:layout_width="2dp"
+                         android:layout_height="@dimen/size_130"
+                         android:background="#c0c0c0" />
+
+                     <LinearLayout
+                         android:id="@+id/ll_aggregates"
+                         android:layout_width="0dp"
+                         android:layout_height="match_parent"
+                         android:layout_weight="1"
+                         android:gravity="center"
+                         android:orientation="vertical">
+
+
+                         <androidx.appcompat.widget.AppCompatImageView
+                             android:layout_width="@dimen/size_40"
+                             android:layout_height="@dimen/size_35"
+                             android:layout_gravity="center"
+                             android:src="@drawable/aggregates" />
+
+                         <androidx.appcompat.widget.AppCompatTextView
+                             android:id="@+id/txt_sites"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginTop="@dimen/font_10"
+                             android:gravity="center"
+                             android:text="Aggregates"
+                             android:textColor="@color/black"
+                             android:textSize="@dimen/font_15" />
+
+                         <androidx.appcompat.widget.AppCompatTextView
+
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:text="Quantity(Tonnes)"
+                             android:textColor="@android:color/darker_gray"
+                             android:textSize="@dimen/font_10" />
+
+
+                     </LinearLayout>-->
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/spacing_15dp"
+                android:layout_marginRight="@dimen/spacing_15dp"
+                android:background="#c0c0c0" />
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_aggregates"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/materials" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/aggregates"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/quantitytones"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/font_10" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/spacing_15dp"
+                android:layout_marginRight="@dimen/spacing_15dp"
+                android:background="#c0c0c0" />
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_material"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/materials" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/materials"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                    </LinearLayout>
+
+                    <!--
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="@dimen/size_130"
+                                            android:background="#c0c0c0" />
+                    -->
+
+                    <!--
+                                        <LinearLayout
+                                            android:id="@+id/ll_haulage"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:layout_width="@dimen/size_40"
+                                                android:layout_height="@dimen/size_35"
+                                                android:layout_gravity="center"
+                                                android:src="@drawable/haulage" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/txt_supervisor"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="@dimen/font_10"
+                                                android:gravity="center"
+                                                android:text="Haulage"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/font_15" />
+
+                                        </LinearLayout>
+                    -->
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginLeft="@dimen/spacing_10dp"
+                            android:layout_marginRight="@dimen/spacing_10dp"
+                            android:background="#c0c0c0" />
+            -->
+        </LinearLayout>
+
+        <include
+            layout="@layout/custom_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-70dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

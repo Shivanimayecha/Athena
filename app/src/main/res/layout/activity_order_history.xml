@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".orderHistory.OrderHistory">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/darkrectangle"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/mapicon"
+                    android:layout_width="@dimen/size_30"
+                    android:layout_height="@dimen/size_30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size_10"
+                    android:src="@drawable/pin" />
+
+                <Spinner
+                    android:id="@+id/spn_site"
+                    style="@style/SpinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/size_10"
+                    android:layout_toRightOf="@id/mapicon"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:dropDownVerticalOffset="30dp"
+                    android:spinnerMode="dropdown" />
+
+                <!--
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/size_5"
+                                    android:layout_toRightOf="@+id/mapicon"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_marginBottom="@dimen/size_5"
+                                        android:text="Select Site"
+                                        android:textColor="@android:color/darker_gray"
+                                        android:textSize="@dimen/font_14" />
+
+
+                                </LinearLayout>
+                -->
+
+            </RelativeLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginTop="@dimen/size_40"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_cmpltorder"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/order" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/completedorder"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+                    </LinearLayout>
+
+                    <!--
+                                        <View
+                                            android:layout_width="2dp"
+                                            android:layout_height="@dimen/size_130"
+                                            android:background="#c0c0c0" />
+                    -->
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="@dimen/spacing_15dp"
+                android:layout_marginRight="@dimen/spacing_15dp"
+                android:background="#c0c0c0" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_marginRight="@dimen/font_10"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_pndorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_35"
+                            android:layout_gravity="center"
+                            android:src="@drawable/openorder" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/font_10"
+                            android:gravity="center"
+                            android:text="@string/pendingorder"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_15" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/custom_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

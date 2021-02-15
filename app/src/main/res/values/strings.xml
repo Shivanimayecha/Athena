@@ -1,0 +1,303 @@
+<resources>
+    <string name="app_name">Athena</string>
+
+    <string name="profile">Profile</string>
+    <string name="myaccount">My Account</string>
+    <string name="logcontractortime">Log Contractor\'s Time</string>
+    <string name="cart">Cart</string>
+    <string name="loghistory">Log History</string>
+    <string name="historyofpastwork">History of past Work</string>
+    <string name="pastpurchase">Past Purchases</string>
+    <string name="narration">Narration</string>
+    <string name="hsreportform">H &amp; S Report Form</string>
+    <string name="hsreportformlist">H &amp; S Report Form List</string>
+    <string name="mobileplantchecklist">Mobile Plant Checklist</string>
+    <string name="jobreview">Job Review</string>
+    <string name="mobileplantformchecklist">Mobile Plant Form List</string>
+    <string name="jobreviewformlist">Job Review Form List</string>
+    <string name="logout">Logout</string>
+    <string name="pdf">Pdf</string>
+    <string name="name">Name</string>
+    <string name="id">id</string>
+    <string name="qty">qty</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="nna">N/A</string>
+    <string name="questiontitle">Question Titile</string>
+    <string name="selectinspectnstatus">Select Inspection Status</string>
+    <string name="order1">Order 1 |</string>
+    <string name="pickuplocation">Pickup Location :</string>
+    <string name="droplocation">Drop Location :</string>
+    <string name="totalqty">Total Qty :</string>
+    <string name="totalitems">Total Items :</string>
+    <string name="orderdelivered">Order Delivered</string>
+    <string name="summaryofmanagement">Summary of Management</string>
+    <string name="completion">Completion</string>
+    <string name="inspectorsignoff">Inspector sign off</string>
+    <string name="sitemanager">Site Manager / Supervisor signature</string>
+    <string name="appendix">Appendix</string>
+    <string name="plantfitforpurpose">Plant fit for purpose</string>
+    <string name="plantshouldbetakenoutofuse">Plant should be taken out of use (plant must be segregated form other plant and labelled ‘NOT TO BE USED’)</string>
+    <string name="signedbyinspector">Signed by Inspector</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="changepassword">Change Password</string>
+    <string name="forgotpassword">Forgot Password ?</string>
+    <string name="forgotpassword1">Forgot Password</string>
+    <string name="login">Login</string>
+    <string name="asasupervisor">As a Supervisor</string>
+    <string name="asamover">As a Mover</string>
+    <string name="sites">Sites</string>
+    <string name="bydate">by Date</string>
+    <string name="selectplant">Select Plant</string>
+    <string name="workonsites">Works on sites :</string>
+    <string name="workonsitesaddimg">Work on sites - Add Images</string>
+    <string name="programs">Programs :</string>
+    <string name="attachpdf">Attach PDF</string>
+    <string name="outstandinginformation">Outstanding information</string>
+    <string name="issuesonsite">Issues on site</string>
+    <string name="dayworkvariation">Day Work / Variation</string>
+    <string name="pumprequired">Pump Required ?</string>
+
+
+    <string name="addtocart">Add to Cart</string>
+    <string name="placeorder">Place Order</string>
+    <string name="noorder">No Order</string>
+    <string name="cartisempty">Cart is Empty</string>
+    <string name="nocompleted_order">No Completed Order</string>
+
+    <string name="requiredelivery_date">Required Delivery Date</string>
+    <string name="notedesired_time">Note / Desired time</string>
+    <string name="mblfrmlist">Mobile Plant Form List</string>
+    <string name="jobrevfrmlst">Job Review Form List</string>
+    <string name="timelog">Time Log</string>
+    <string name="mblplntchecklist">Mobile Plant CheckList</string>
+    <string name="orderhistroy">Order History</string>
+    <string name="materialplaceorder">Material - Place Order</string>
+    <string name="subcontractorreport">Sub-Contractor Report</string>
+    <string name="sitereport">Site Report</string>
+    <string name="payout">Payout</string>
+    <string name="reports">Reports</string>
+    <string name="pastreport">Past Reports</string>
+    <string name="review">Review</string>
+    <string name="checkuncheck">Check - Uncheck</string>
+    <string name="date">22/07/2020</string>
+    <string name="date1">Date :</string>
+    <string name="vehicledefectreport">Vehicle Defect Report</string>
+    <string name="nildeffound">Nil defects found</string>
+    <string name="haulier">Haulier\'s Copy</string>
+    <string name="weightinword">Weight ( In Words):</string>
+    <string name="printname">Print name:</string>
+    <string name="jobtitle">Job Titile:</string>
+    <string name="submit">Submit</string>
+    <string name="export_csv">Export CSV</string>
+    <string name="completeorder">Completed Order</string>
+    <string name="addimg">Add Image</string>
+    <string name="addimgs">Add Images</string>
+    <string name="typehere">Type here…</string>
+    <string name="Comment">Comment</string>
+    <string name="delvryconfrmation">Delivery confirmation</string>
+    <string name="instruction">Instructions:</string>
+    <string name="score">Score:</string>
+    <string name="score40">= Scores 40</string>
+    <string name="score20">= Scores 20</string>
+    <string name="score01">= Scores 01</string>
+    <string name="score10">= Scores -10</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="site">Site :</string>
+    <string name="datetimeofinspection">Date &amp; time of inspection:</string>
+    <string name="time">Time</string>
+    <string name="nameofsupervisor">Name of Supervisor:</string>
+    <string name="nameofcontractmanager">Name of Contract Manager :</string>
+    <string name="inspectedby">Inspected by :</string>
+    <string name="reportreference">Report Reference :</string>
+    <string name="start">Start</string>
+    <string name="actionneeded">Action Needed</string>
+    <string name="inspectorname">Inspector Name</string>
+    <string name="changeprofilephoto">Change Profile Photo</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="contact">Contact</string>
+    <string name="address">Address</string>
+    <string name="selecthsinspectionstatus">Select H&amp;S Inspection Status</string>
+    <string name="selectcontractor">Select Contractor</string>
+    <string name="done">Done</string>
+    <string name="enterquantity">Enter Quantity</string>
+    <string name="vehicleselection">Vehicle Selection</string>
+    <string name="assignorder">Assigned Order</string>
+    <string name="allassignorder">All Assigned Order</string>
+    <string name="completedorder">Completed Order</string>
+    <string name="pastdefectvehiclereport">Past Vehicle Defect Report</string>
+    <string name="selectdate">Select Date</string>
+    <string name="timecards">Time Cards</string>
+    <string name="putremarkscomplaintsandfeedback">put remarks,complaints and feedback</string>
+    <string name="remarks">Remarks</string>
+    <string name="endday">End Day</string>
+    <string name="ordernumber">Order Number</string>
+    <string name="orderdate">Order Date</string>
+    <string name="orderdeliverydate">Order Delivery Date </string>
+    <string name="orderplaced">Order Placed</string>
+    <string name="productname">Product name</string>
+    <string name="receive">Received</string>
+    <string name="remarksreview">Remarks / Review</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="days">Days</string>
+    <string name="totalhours">Total Hours</string>
+    <string name="totalworkhours">Total Work Hours :</string>
+    <string name="subcontractorreports">SubContractor Reports</string>
+    <string name="subcontractorpayoutreports">SubContractor Payout Reports</string>
+    <string name="datehr">Date/Hr.</string>
+    <string name="sitesworkdone">Sites / Work done</string>
+    <string name="constructiondailyreports">Construction Daily Reports</string>
+    <string name="andfeildmanagement">and Field Management</string>
+    <string name="getingetitdonegethome">Get in. Get it done. Get home.</string>
+    <string name="totalhoursinthissite">Total Hours in this site</string>
+    <string name="weekly">Weekly</string>
+    <string name="week">Week</string>
+    <string name="mnth">Month</string>
+    <string name="subcontractor">Sub-Contractor</string>
+    <string name="sitereports">Site Reports</string>
+    <string name="contractorwisetimelog">Contractor wise Time-log</string>
+    <string name="byperson">by Person</string>
+    <string name="siteswisetimelog">Sites wise Time-log</string>
+    <string name="byprojects">by Projects</string>
+    <string name="editprofile">Edit Profile</string>
+    <string name="concrete">Concrete</string>
+    <string name="quantitym2">Quantity(m²)</string>
+    <string name="aggregates">Aggregates</string>
+    <string name="quantitytones">Quantity(Tonnes)</string>
+    <string name="materials">Materials</string>
+    <string name="pendingorder">Pending Orders</string>
+    <string name="orderassign">Order Assign</string>
+    <string name="ticketnumber">Ticket Number</string>
+    <string name="customername">Customer Name</string>
+    <string name="drivername">Driver Name</string>
+    <string name="wagonregno">Wagon Reg No :</string>
+    <string name="customersignature">Customer Signature</string>
+    <string name="plant">Plant :</string>
+    <string name="dateofthroughexamination">Date of Thorough Examination :</string>
+    <string name="dateofinspectn">Date of Inspection :</string>
+    <string name="plantmodelsn">Plant Model &amp; S/N :</string>
+    <string name="operatorname">Operator Name :</string>
+    <string name="hirecompany">Hire company :</string>
+    <string name="dateoflastservice">Date of Last Service :</string>
+    <string name="dateofnextservice">Date of Next Service :</string>
+    <string name="rate">Rate :</string>
+    <string name="payment">Payment :</string>
+    <string name="orders">Orders</string>
+    <string name="allorders">All Orders</string>
+    <string name="cmpltorders">Complete</string>
+
+    <string name="dialog_title">SIGN HERE</string>
+    <string name="hint_cancel">Cancel</string>
+    <string name="hint_clear">Clear</string>
+    <string name="hint_save">Save</string>
+
+    <string name="good">Good :</string>
+    <string name="minor_infringment">Minor Infringement :</string>
+    <string name="improvment_requird">Improvement Required :</string>
+    <string name="immdate_actn_requrd">Immediate action required :</string>
+
+    <string name="good_instrctn">Meets regulatory requirements and industry best practice.</string>
+    <string name="minor_infrigment">Standards fall short of industry best practice.</string>
+    <string name="improvmnt_requird">Site standards need attention to avoid breach of regulation.</string>
+    <string name="immdat_actn_requrd">To reduce the risk of harm and/or enforcement action.</string>
+    <string name="na">Not Applicable </string>
+    <string name="two">Add photos and notes by clicking on the paperclip icon.</string>
+    <string name="three">To add Corrective Actions, click on the paperclip icon then "Add Action",
+        provide a description, assign to a member, set priority and due date.</string>
+    <string name="four">Complete audit by providing digital signature.</string>
+    <string name="five">Share your report by exporting as PDF, Word, Excel, or Web Link.</string>
+    <string name="error_null_cursor">Oops, something went wrong!</string>
+    <string name="album_view">Select photo album</string>
+    <string name="capture_photo">Capture Photo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="permission_info">App requires permission to Storage to view images.</string>
+    <string name="permission_force">App requires permission to Storage to view images. Tap Settings and go to Permissions to grant permission.</string>
+    <string name="permission_ok">OK</string>
+    <string name="permission_settings">Settings</string>
+    <string name="permission_package">package</string>
+    <string name="selected">selected</string>
+    <string name="image_view">Tap to select images</string>
+
+    <string name="mblplnt_note">Ensure the mobile plant is parked in a safe place before carrying out checks i.e. free of obstructions / people; all checks to be carried out by the trained &amp; competent operator as per manufacture’s recommendations; this list is a simple aid not comprehensive in detail of the depth of checks; the competent person should check all applicable items  before starting work each day – if not applicable put a line through. Write in any other checks you carry out that are not listed and initial each box for the relevant day of the week. Weekly inspection should be in line with machine’s specific requirements outlined in handbook for the machine.</string>
+
+    <string-array name="start_time">
+        <item>Select Start time</item>
+        <!--<item>07:30</item>
+        <item>08:00</item>
+        <item>08:30</item>
+        <item>09:00</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>-->
+        <item>01:00</item>
+        <item>01:30</item>
+        <item>02:00</item>
+        <item>02:30</item>
+        <item>03:00</item>
+        <item>03:30</item>
+        <item>04:00</item>
+        <item>04:30</item>
+        <item>05:00</item>
+        <item>05:30</item>
+        <item>06:00</item>
+        <item>06:30</item>
+        <item>07:00</item>
+        <item>07:30</item>
+        <item>08:00</item>
+        <item>08:30</item>
+        <item>09:00</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+    </string-array>
+
+    <string-array name="end_time">
+        <item>Select End time</item>
+        <!--<item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>-->
+        <item>01:00</item>
+        <item>01:30</item>
+        <item>02:00</item>
+        <item>02:30</item>
+        <item>03:00</item>
+        <item>03:30</item>
+        <item>04:00</item>
+        <item>04:30</item>
+        <item>05:00</item>
+        <item>05:30</item>
+        <item>06:00</item>
+        <item>06:30</item>
+        <item>07:00</item>
+        <item>07:30</item>
+        <item>08:00</item>
+        <item>08:30</item>
+        <item>09:00</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
