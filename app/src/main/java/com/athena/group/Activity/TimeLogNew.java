@@ -1,7 +1,10 @@
 package com.athena.group.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.transition.AutoTransition;
 import androidx.transition.TransitionManager;
 
@@ -10,6 +13,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -24,7 +28,9 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -47,10 +53,12 @@ import com.athena.group.Model.SiteContractorModel;
 import com.athena.group.Model.SpinnerModel;
 import com.athena.group.Model.TimeLogModel;
 import com.athena.group.R;
+import com.athena.group.adapter.AssignOrderAdapter;
 import com.athena.group.application.SessionManager;
 import com.athena.group.application.Utility;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
+import com.thomashaertel.widget.MultiSpinner;
 import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 import com.wang.avi.AVLoadingIndicatorView;
 
@@ -62,6 +70,7 @@ import java.net.SocketTimeoutException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -84,8 +93,8 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
     private String TAG = "TAG";
     @BindView(R.id.spn_site)
     Spinner spn_site;
-    @BindView(R.id.spn_contractor)
-    Spinner spn_contractor;
+    /* @BindView(R.id.spn_contractor)
+     Spinner spn_contractor;*/
     @BindView(R.id.spn_stime)
     Spinner spn_stime;
     @BindView(R.id.spn_etime)
@@ -177,9 +186,48 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
     String wrkhr1 = "";
     DatePickerDialog datePickerDialog;
 
-    @BindView(R.id.text)
-    SearchableSpinner text;
+    /*@BindView(R.id.text)
+    SearchableSpinner text;*/
+    @BindView(R.id.spin_friend_list)
+    MultiSpinner spin_friend_list;
     private String ampm = "AM", ampm1 = "PM";
+    String friend_id_str = "", friend_name_str = "";
+    private Integer[] friend_id = new Integer[]{};
+    private String[] friend_name = new String[]{};
+    private Integer[] sel_friend_id = new Integer[]{};
+    private String[] sel_friend_name = new String[]{};
+    private ArrayAdapter<String> adapter_friend;
+    List<String> items;
+    String con_res = "";
+    DateAdapter adapter;
+    //DateAdapter1 adapter1;
+    RecyclerView.LayoutManager layoutManager;
+    private MultiSpinner.MultiSpinnerListener onSelectedListenerFriend = new MultiSpinner.MultiSpinnerListener() {
+        public void onItemsSelected(boolean[] selected) {
+            StringBuilder builder = new StringBuilder();
+            friend_id_str = "";
+            friend_name_str = "";
+            for (int i = 0; i < selected.length; i++) {
+                if (selected[i]) {
+                    builder.append(friend_id[(int) adapter_friend.getItemId(i)]).append(",");
+                    friend_id_str += friend_id[(int) adapter_friend.getItemId(i)] + ",";
+                    // items = Arrays.asList(friend_id_str.split("\\s*,\\s*"));
+
+                    friend_name_str += adapter_friend.getItem(i) + ",";
+                    spin_friend_list.setSelected(selected);
+                }
+            }
+            // con_res = android.text.TextUtils.join(",", items);
+            Log.e("friend_list", friend_id_str);
+        }
+    };
+    private List<SiteContractorModel.Data> arrayListCont;
+
+    @BindView(R.id.rv_list)
+    RecyclerView rv_list;
+    @BindView(R.id.rv_list1)
+    RecyclerView rv_list1;
+    List<String> dates;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -195,7 +243,7 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
         //Log.e("TimelogData_Data", "getIntentData: " + wstime + "--" + wetime + "--" + bstime + "--" + betime);
         initViews();
 
-        text.setTitle("Select Contractor");
+        // text.setTitle("Select Contractor");
 
     }
 
@@ -206,13 +254,53 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
         txt_day.setText(Utility.day);
         site_date = Utility.date1;
 
+        rv_list.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,
+                false);
+        rv_list.setLayoutManager(layoutManager);
+
+        rv_list1.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,
+                false);
+        rv_list1.setLayoutManager(layoutManager);
+
+        dates = new ArrayList<>();
+        dates.add("Surname");
+        dates.add("FirstName");
+        dates.add("Meagill Rise 1194");
+        dates.add("Harrogate 1224");
+        dates.add("Killinghall 1238");
+        dates.add("Broomsfield 1247");
+        dates.add("Brookfield Garth 1248");
+        dates.add("Sherburn In Elmet 1253");
+        dates.add("Thirsk 1260");
+        dates.add("Rossendale 1261");
+        dates.add("Driglington 1262");
+        dates.add("Cookridge Hospital 1263");
+        dates.add("East Ardsley 1264");
+        dates.add("Beckingham 1268");
+        dates.add("Fox Hill Cresent 1271");
+        dates.add("Beachill 1277");
+        dates.add("Chellow Quarry 1281");
+        dates.add("Stump Cross 1282");
+        dates.add("Peaseland 1286");
+        dates.add("Bowling green 1285");
+        dates.add("Woodsmith 1287");
+        dates.add("Bridge 1288");
+        dates.add("Standbridge 1289");
+        dates.add("Denholmes 1290");
+
+        adapter = new DateAdapter(TimeLogNew.this, dates);
+        rv_list.setAdapter(adapter);
+
+       /* adapter1 = new DateAdapter1(TimeLogNew.this, adapter.getItemCount());
+        rv_list1.setAdapter(adapter1);*/
         onClickListener();
         radioCheckChanged();
         allSpinnersBind();
     }
 
     private void onClickListener() {
-
         back_icon.setOnClickListener(this);
         btn_endday.setOnClickListener(this);
         rb1.setOnClickListener(this);
@@ -241,7 +329,7 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
             case R.id.btn_endday:
                 if (s_id.equals("")) {
                     Utility.displayToast(TimeLogNew.this, "Please Select Site");
-                } else if (c_id.equals("")) {
+                } else if (friend_id_str.equals("")) {
                     Utility.displayToast(TimeLogNew.this, "Please Select Contractor");
                 } else if (calendertxt.getText().toString().equals("")) {
                     Utility.displayToast(TimeLogNew.this, "Please Select date");
@@ -433,7 +521,7 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
         });*/
 
 
-        text.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        /*text.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (text.getSelectedItem() == "Select Contractor") {
@@ -449,7 +537,7 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
-        });
+        });*/
     }
 
     private void timeCalculation() {
@@ -491,12 +579,39 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
             Date date1 = timeFormat.parse(time1);
             Date date2 = timeFormat.parse(time2);
 
+            Log.e(TAG, "date 1--date 2--: " + date1 + "----" + date2);
             long sum = date1.getTime() + date2.getTime();
+            Log.e(TAG, "sum: " + sum);
 
             String date3 = timeFormat.format(new Date(sum));
-            Log.e(TAG, "display hours: " + date3);
-            txt_totalhrs.setText("Today: " + date3 + " Hours");
-            //txt_totalhrs.setText("Today: " + wrkhr + " Hours");
+            Log.e(TAG, "date3 " + date3);
+            //txt_totalhrs.setText("Today: " + date3 + " Hours");
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+                Calendar calendar = Calendar.getInstance();
+
+                calendar.setTime(sdf.parse(date3));
+                Log.e("hour", "" + calendar.get(Calendar.HOUR_OF_DAY));
+                Log.e("minutes", "" + calendar.get(Calendar.MINUTE));
+                Log.e("seconds", "" + calendar.get(Calendar.SECOND));
+
+                double hh = calendar.get(Calendar.HOUR_OF_DAY);
+                double mm = calendar.get(Calendar.MINUTE);
+                double dh = hh + mm / 60;
+                Log.e(TAG, "dh: " + dh);
+                txt_totalhrs.setText("Today: " + dh + " Hours");
+
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+           /* double hh1 = hh;
+            double mm1 = mm;
+            double dh = hh + mm / 60;
+            Log.e(TAG, "dh: " + dh);*/
+            /*double hh = 8;
+            double mm = 30;
+            double dh = hh + mm / 60;
+            Log.e(TAG, "dh: " + dh);*/
         } catch (
                 ParseException e) {
             e.printStackTrace();
@@ -662,7 +777,7 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
         try {
             RequestBody userid = RequestBody.create(MediaType.parse("text/plain"), sessionManager.getKeyId());
             RequestBody site = RequestBody.create(MediaType.parse("text/plain"), s_id);
-            RequestBody contractor = RequestBody.create(MediaType.parse("text/plain"), c_id);
+            RequestBody contractor = RequestBody.create(MediaType.parse("text/plain"), friend_id_str);
             RequestBody stime = RequestBody.create(MediaType.parse("text/plain"), spn_starttime);
             RequestBody etime = RequestBody.create(MediaType.parse("text/plain"), spn_endtime);
             RequestBody be_time = RequestBody.create(MediaType.parse("text/plain"), brk_time);
@@ -689,7 +804,7 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
             map.put("end_ampm", e_ampm);
 
             avi.show();
-            Observable<TimeLogModel> responseObservable = apiservice.addWorkLog(map);
+            Observable<TimeLogModel> responseObservable = apiservice.combine_add_work_log(map);
 
             responseObservable.subscribeOn(Schedulers.newThread())
                     .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
@@ -783,7 +898,7 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
         try {
             RequestBody userid = RequestBody.create(MediaType.parse("text/plain"), sessionManager.getKeyId());
             RequestBody site = RequestBody.create(MediaType.parse("text/plain"), s_id);
-            RequestBody contractor = RequestBody.create(MediaType.parse("text/plain"), c_id);
+            RequestBody contractor = RequestBody.create(MediaType.parse("text/plain"), friend_id_str);
             RequestBody stime = RequestBody.create(MediaType.parse("text/plain"), spn_starttime);
             RequestBody etime = RequestBody.create(MediaType.parse("text/plain"), spn_endtime);
             RequestBody be_time = RequestBody.create(MediaType.parse("text/plain"), brk_time);
@@ -937,21 +1052,38 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
                     public void onNext(SiteContractorModel model) {
                         statusCode = model.getStatusCode();
                         if (statusCode == 200) {
-                            data1 = model.getData();
+                            /*data1 = model.getData();
 
                             for (int i = 0; i < model.getData().size(); i++) {
                                 contractrArray.add(model.getData().get(i).getName() + " " + model.getData().get(i).getLname());
 
+                            }*/
+                            arrayListCont = new ArrayList<>();
+                            arrayListCont = model.getData();
+                            if (arrayListCont != null) {
+                                friend_id = new Integer[arrayListCont.size()];
+                                friend_name = new String[arrayListCont.size()];
+
+                                adapter_friend = new ArrayAdapter<>(TimeLogNew.this, android.R.layout.simple_spinner_item);
+
+                                for (int i = 0; i < arrayListCont.size(); i++) {
+                                    friend_id[i] = Integer.parseInt(arrayListCont.get(i).getUserId());
+                                    friend_name[i] = arrayListCont.get(i).getName() + " " + arrayListCont.get(i).getLname();
+                                    adapter_friend.add(friend_name[i]);
+                                }
+                                spin_friend_list.setHint("Select Contractor");
+                                //spin_friend_list.setHintTextColor(getResources().getColor(R.color.black));
+                                spin_friend_list.setAdapter(adapter_friend, false, onSelectedListenerFriend);
                             }
                         }
                     }
                 });
 
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, R.layout.spinner_item, contractrArray);
+       /* ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, R.layout.spinner_item, contractrArray);
         dataAdapter.add("Select Contractor");
         dataAdapter.setDropDownViewResource(R.layout.spinner_item);
         //spn_contractor.setAdapter(dataAdapter);
-        text.setAdapter(dataAdapter);
+        text.setAdapter(dataAdapter);*/
 
     }
 
@@ -1267,6 +1399,82 @@ public class TimeLogNew extends AppCompatActivity implements CompoundButton.OnCh
             Log.e("timeformat", timedata);
         }
         return timedata;
+    }
+
+    public class DateAdapter extends RecyclerView.Adapter<DateAdapter.MyViewHolder> {
+
+        Context context;
+        List<String> arrayList;
+
+        public DateAdapter(Context context, List<String> arrayList) {
+            this.context = context;
+            this.arrayList = arrayList;
+        }
+
+        @NonNull
+        @Override
+        public DateAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tablelayout, parent, false);
+            return new MyViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull DateAdapter.MyViewHolder holder, int position) {
+            holder.textView.setText(arrayList.get(position));
+        }
+
+        @Override
+        public int getItemCount() {
+            return arrayList.size();
+        }
+
+        public class MyViewHolder extends RecyclerView.ViewHolder {
+            TextView textView;
+
+            public MyViewHolder(@NonNull View itemView) {
+                super(itemView);
+                textView = itemView.findViewById(R.id.txt_text);
+            }
+        }
+    }
+
+    public class DateAdapter1 extends RecyclerView.Adapter<DateAdapter1.MyViewHolder> {
+
+        Context context;
+        //List<String> arrayList;
+        int itemCount;
+
+        public DateAdapter1(Context context, int itemCount) {
+            this.context = context;
+            this.itemCount = itemCount;
+        }
+
+
+        @NonNull
+        @Override
+        public DateAdapter1.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.value_layout, parent, false);
+            return new MyViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull DateAdapter1.MyViewHolder holder, int position) {
+            // holder.textView.setText(arrayList.get(position));
+        }
+
+        @Override
+        public int getItemCount() {
+            return itemCount;
+        }
+
+        public class MyViewHolder extends RecyclerView.ViewHolder {
+            //TextView textView;
+
+            public MyViewHolder(@NonNull View itemView) {
+                super(itemView);
+                //textView = itemView.findViewById(R.id.txt_text);
+            }
+        }
     }
 }
 

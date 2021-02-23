@@ -184,6 +184,26 @@ public class ConcreteScreen extends Activity implements View.OnClickListener {
         arrayList.add("28");
         arrayList.add("29");
         arrayList.add("30");
+        arrayList.add("31");
+        arrayList.add("32");
+        arrayList.add("33");
+        arrayList.add("34");
+        arrayList.add("35");
+        arrayList.add("36");
+        arrayList.add("37");
+        arrayList.add("38");
+        arrayList.add("39");
+        arrayList.add("40");
+        arrayList.add("41");
+        arrayList.add("42");
+        arrayList.add("43");
+        arrayList.add("44");
+        arrayList.add("45");
+        arrayList.add("46");
+        arrayList.add("47");
+        arrayList.add("48");
+        arrayList.add("49");
+        arrayList.add("50");
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.spinner_item, arrayList);
         arrayAdapter.setDropDownViewResource(R.layout.spinner_item);

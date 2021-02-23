@@ -330,6 +330,10 @@ public interface ApiInterface {
     public Observable<TimeLogModel> addWorkLog(@PartMap Map<String, RequestBody> map);
 
     @Multipart
+    @POST("UserData/combine_add_work_log")
+    public Observable<TimeLogModel> combine_add_work_log(@PartMap Map<String, RequestBody> map);
+
+    @Multipart
     @POST("UserData/edit_work_log")
     public Observable<TimeLogModel> editWorkLog(@PartMap Map<String, RequestBody> map);
 
